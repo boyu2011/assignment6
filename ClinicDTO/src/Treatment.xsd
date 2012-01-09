@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.example.org/Treatment"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/Treatment"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	jaxb:version="2.0">
+
+	<annotation>
+		<appinfo>
+			<jaxb:globalBindings>
+				<jaxb:javaType name="java.util.Date" xmlType="date"
+					parseMethod="stevens.cs.cs548.clinic.service.dto.DateAdapter.parseDate"
+					printMethod="stevens.cs.cs548.clinic.service.dto.DateAdapter.printDate"
+				/>
+			</jaxb:globalBindings>
+		</appinfo>
+	</annotation>
+
+	<element name="treatment">
+		<complexType>
+			<sequence>
+				<element name="tid" type="int"></element>
+				<element name="provider" type="int"></element>
+				<choice>
+					<element name="drug" type="tns:DrugTreatmentType"></element>
+					<element name="surgery" type="tns:SurgeryType"></element>
+					<element name="radiology" type="tns:RadiologyType"></element>
+				</choice>
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="DrugTreatmentType">
+		<sequence>
+			<element name="drugName" type="string"></element>
+			<element name="dosage" type="int"></element>
+		</sequence>
+	</complexType>
+
+    <complexType name="SurgeryType">
+    	<sequence>
+    		<element name="date" type="date"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RadiologyType">
+    	<sequence>
+    		<element name="dates" type="tns:RadDatesType"></element>
+    	</sequence>
+    </complexType>
+
+    <simpleType name="RadDatesType">
+    	<list itemType="date"></list></simpleType>
+
+</schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ejbModule"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 6 (MacOS X Default)">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.sun.enterprise.jst.server.runtimeTarget/GlassFish 3.1">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.ejb"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ClinicDTO"/>
+	<classpathentry kind="lib" path="/Users/boyu2011/dev_tools/glassfish3/glassfish/modules/javax.ejb.jar"/>
+	<classpathentry kind="lib" path="/Users/boyu2011/dev_tools/glassfish3/glassfish/modules/javax.persistence.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ClinicDomainModel"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
